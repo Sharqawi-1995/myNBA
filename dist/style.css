@@ -2,8 +2,6 @@ body {
   background-color: #ecf0f1;
 }
 
-/* search container */
-
 #searchContainer {
   display: flex;
   align-items: stretch;
@@ -24,8 +22,6 @@ body {
 #submitBtn:hover {
   background: rgba(0, 128, 0, 0.575);
 }
-
-/* display container */
 
 #displayContainer {
   display: grid;
