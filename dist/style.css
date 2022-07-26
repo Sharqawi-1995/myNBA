@@ -1,0 +1,63 @@
+body {
+  background-color: #ecf0f1;
+}
+
+/* search container */
+
+#searchContainer {
+  display: flex;
+  align-items: stretch;
+  height: 5vh;
+  padding: 1vmax;
+}
+
+#teamNameInput {
+  flex-grow: 8;
+  caret-color: red;
+}
+
+#submitBtn {
+  flex-grow: 2;
+  background: lightgreen;
+}
+
+#submitBtn:hover {
+  background: rgba(0, 128, 0, 0.575);
+}
+
+/* display container */
+
+#displayContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  text-align: center;
+  font-weight: 400;
+  font-size: x-large;
+  font-family: Palatino, Georgia, serif;
+}
+
+.displayPlayerData {
+  background-color: #e67e22;
+}
+
+.namesHeader {
+  position: relative;
+}
+
+.icon {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+
+.icon:hover {
+  color: #bdc3c7;
+  cursor: pointer;
+}
+
+.playerImg {
+  background-color: #bdc3c7;
+  width: 95%;
+  height: 340px;
+}

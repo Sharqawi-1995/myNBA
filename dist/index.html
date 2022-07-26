@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>My NBA API</title>
+  </head>
+  <body>
+    <div id="searchContainer">
+      <input
+        type="text"
+        id="teamNameInput"
+        placeholder="Enter you team name here:"
+      />
+      <button type="submit" id="submitBtn" onclick="displayDataBtn()">
+        GET ROSTER
+      </button>
+    </div>
+    <button type="submit" id="dreamTeamBtn" onclick="displayDreamTeam()">
+      Get Your Dream Team
+    </button>
+    <hr />
+    <div id="displayContainer"></div>
+
+    <script id="displayContainer-template" type="text/x-handlebars-template">
+      <div class='displayPlayerData'>
+        <div class='namesHeader'>
+          <span class='firstName'>{{this.firstName}}</span>
+          <span class='lastName'>{{this.lastName}}</span>
+          <span class='icon'><i class='fas fa-plus-circle'></i></span>
+        </div>
+        <div class='jersey'>{{this.jersey}}</div>
+        <img
+          class='playerImg'
+          src='https://nba-players.herokuapp.com/players/{{this.lastName}}/{{this.firstName}}'
+          onerror='img404(this);'
+        />
+        <div class='position'>{{this.pos}}</div>
+      </div>
+    </script>
+
+    <script src="./jquery/dist/jquery.js"></script>
+    <script src="./handlebars/dist/handlebars.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
