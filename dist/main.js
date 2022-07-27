@@ -26,7 +26,7 @@ const getPlayerData = () => {
       .text()
 
     let jersey = $(this).closest('.displayPlayerData').find('.jersey').text()
-    
+
     let position = $(this)
       .closest('.displayPlayerData')
       .find('.position')
@@ -51,12 +51,12 @@ const getPlayerData = () => {
 }
 
 const fetchData = () => {
-  let teamName = $('#teamNameInput').val().toLowerCase();
+  let teamName = $('#teamNameInput').val().toLowerCase()
   $.get(`/teams/${teamName}`, (teamData) => {
     render(teamData)
     getPlayerData()
   })
-  $('#teamNameInput').val('');
+  $('#teamNameInput').val('')
 }
 
 const displayDataBtn = () => {
