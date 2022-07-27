@@ -33,9 +33,11 @@
     <script id="displayContainer-template" type="text/x-handlebars-template">
       <div class='displayPlayerData'>
         <div class='namesHeader'>
+
           <span class='firstName'>{{this.firstName}}</span>
           <span class='lastName'>{{this.lastName}}</span>
-          <span class='icon'><i class='fas fa-plus-circle'></i></span>
+          <span class='icon iconAdd'><i class='fas fa-plus-circle'></i></span>
+          <span class='icon iconRemove'><i class='fas fa-minus-circle'></i></span>
         </div>
         <div class='jersey'>{{this.jersey}}</div>
         <img

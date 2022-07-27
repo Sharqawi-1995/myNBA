@@ -11,12 +11,12 @@ body {
 
 #teamNameInput {
   flex-grow: 8;
-  caret-color: red;
+  caret-color: rgb(0, 0, 0);
 }
 
 #submitBtn {
   flex-grow: 2;
-  background: lightgreen;
+  background: rgb(255, 0, 0);
 }
 
 #submitBtn:hover {
@@ -34,18 +34,24 @@ body {
 }
 
 .displayPlayerData {
-  background-color: #e67e22;
+  background-color: #0015ff;
 }
 
 .namesHeader {
   position: relative;
 }
 
-.icon {
+.iconAdd {
   position: absolute;
   top: 5px;
   right: 10px;
 }
+
+.iconRemove {
+  position: absolute;
+  top: 5px;
+  left: 10px;
+} 
 
 .icon:hover {
   color: #bdc3c7;

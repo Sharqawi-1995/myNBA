@@ -1,6 +1,7 @@
 const render = (teamData) => {
   let source = $('#displayContainer-template').html()
   let template = Handlebars.compile(source)
+  
   $('#displayContainer').empty()
   for (let player of teamData) {
     let newHTML = template(player)
@@ -9,7 +10,7 @@ const render = (teamData) => {
 }
 
 const getPlayerData = () => {
-  $('.icon').on('click', function () {
+  $('.iconAdd').on('click', function () {
     let firstName = $(this)
       .closest('.displayPlayerData')
       .find('.namesHeader')
@@ -33,6 +34,12 @@ const getPlayerData = () => {
       lastName: lastName,
       jersey: jersey,
       pos: position,
+    }
+
+    const deletePlayerData=()=>{
+      $('.iconRemove').on('click', function () {
+        
+      })
     }
 
     alert(`${player.firstName} ${player.lastName} added successfully`);
