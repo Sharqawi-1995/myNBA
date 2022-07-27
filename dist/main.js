@@ -8,9 +8,11 @@ const render = (teamData) => {
     $('#displayContainer').append(newHTML)
   }
 }
+let players=[]
 
 const getPlayerData = () => {
   $('.iconAdd').on('click', function () {
+    
     let firstName = $(this)
       .closest('.displayPlayerData')
       .find('.namesHeader')
@@ -24,6 +26,7 @@ const getPlayerData = () => {
       .text()
 
     let jersey = $(this).closest('.displayPlayerData').find('.jersey').text()
+    
     let position = $(this)
       .closest('.displayPlayerData')
       .find('.position')
