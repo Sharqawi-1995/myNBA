@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router()
 const urllib = require('urllib')
 
-const teamToIDs = {
+const teamsToIDs = {
   lakers: '1610612747',
   warriors: '1610612744',
   heat: '1610612748',
@@ -26,7 +26,7 @@ urllib.request(
 router.get('/teams/:teamName', (req, res) => {
   const param = req.params.teamName
   let result = parsedTeamData
-    .filter((team) => team.teamId === teamToIDs[param] && team.isActive)
+    .filter((team) => team.teamId === teamsToIDs[param] && team.isActive)
     .map((t) => {
       return {
         firstName: t.firstName,
@@ -42,9 +42,9 @@ router.get('/teams/:teamName', (req, res) => {
 router.put('/team/', (req, res) => {
   const team = req.body
 
-  teamToIDs[team.teamName] = team.teamId
+  teamsToIDs[team.teamName] = team.teamId
 
-  res.send(teamToIDs)
+  res.send(teamsToIDs)
 })
 
 router.get('/dreamTeam', (req, res) => res.send(dreamTeam.slice(0, 5)))
