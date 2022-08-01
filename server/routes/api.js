@@ -51,6 +51,7 @@ router.get('/dreamTeam', (req, res) => res.send(dreamTeam.slice(0, 5)))
 
 router.post('/roster', (req, res) => {
   let player = req.body
+  
   // dreamTeam.forEach(element => {
   //   if (element===player) {
   //     return "player already exist"
