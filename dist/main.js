@@ -39,11 +39,11 @@ const getPlayerData = () => {
       pos: position,
     }
 
-    const deletePlayerData=()=>{
-      $('.iconRemove').on('click', function () {
+    // const deletePlayerData=()=>{
+    //   $('.iconRemove').on('click', function () {
         
-      })
-    }
+    //   })
+    // }
 
     alert(`${player.firstName} ${player.lastName} added successfully`);
     $.post('/roster', player, () => {})
